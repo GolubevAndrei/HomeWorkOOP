@@ -6,6 +6,7 @@ public class Ravenclaw extends Hogwarts {
 
     public Ravenclaw(String firstName, String lastName, int magicPower, int transgressionDistance, int mind, int wisdom, int wit, int creativity) {
         super(firstName, lastName, magicPower, transgressionDistance);
+        Hogwarts hogwarts = new Hogwarts(firstName,lastName,magicPower,transgressionDistance);
         this.mind = mind;
         this.wisdom = wisdom;
         this.wit = wit;
@@ -42,6 +43,11 @@ public class Ravenclaw extends Hogwarts {
 
     public void setCreativity(int creativity) {
         this.creativity = creativity;
+    }
+
+    public String getHogwarts() {
+        return "Ученик Хогвартса " + getFirstName() + " " + getLastName() + " магическая сила " +
+                getMagicPower() + ", расстояние трансгресии " + getTransgressionDistance();
     }
 
     @Override

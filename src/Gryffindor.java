@@ -5,6 +5,7 @@ public class Gryffindor extends Hogwarts {
 
     public Gryffindor(String firstName, String lastName, int magicPower, int transgressionDistance, int nobility, int honor, int bravery) {
         super(firstName,lastName,magicPower,transgressionDistance);
+        Hogwarts hogwarts = new Hogwarts(firstName,lastName,magicPower,transgressionDistance);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
@@ -34,6 +35,11 @@ public class Gryffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
+    public String getHogwarts() {
+        return "Ученик Хогвартса " + getFirstName() + " " + getLastName() + " магическая сила " +
+                getMagicPower() + ", расстояние трансгресии " + getTransgressionDistance();
+    }
+
     @Override
     public String toString() {
         return "Ученик Хогвартса, факультета Гриффиндор " + getFirstName() + " " + getLastName() + " магическая сила " +
@@ -42,4 +48,6 @@ public class Gryffindor extends Hogwarts {
                 ", honor=" + honor +
                 ", bravery=" + bravery;
     }
+
+
 }

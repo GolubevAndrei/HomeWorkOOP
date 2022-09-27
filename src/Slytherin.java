@@ -7,6 +7,7 @@ public class Slytherin extends Hogwarts {
 
     public Slytherin(String firstName, String lastName, int magicPower, int transgressionDistance, int cunning, int determination, int ambition, int resourcefulness, int lustPower) {
         super(firstName, lastName, magicPower, transgressionDistance);
+        Hogwarts hogwarts = new Hogwarts(firstName,lastName,magicPower,transgressionDistance);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
@@ -52,6 +53,11 @@ public class Slytherin extends Hogwarts {
 
     public void setLustPower(int lustPower) {
         this.lustPower = lustPower;
+    }
+
+    public String getHogwarts() {
+        return "Ученик Хогвартса " + getFirstName() + " " + getLastName() + " магическая сила " +
+                getMagicPower() + ", расстояние трансгресии " + getTransgressionDistance();
     }
 
     @Override

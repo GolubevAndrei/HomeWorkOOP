@@ -5,6 +5,7 @@ public class Hufflepuff extends Hogwarts {
 
     public Hufflepuff(String firstName, String lastName, int magicPower, int transgressionDistance, int industriousness, int loyalty, int honesty) {
         super(firstName,lastName,magicPower,transgressionDistance);
+        Hogwarts hogwarts = new Hogwarts(firstName,lastName,magicPower,transgressionDistance);
         this.industriousness = industriousness;
         this.loyalty = loyalty;
         this.honesty = honesty;
@@ -32,6 +33,11 @@ public class Hufflepuff extends Hogwarts {
 
     public void setHonesty(int honesty) {
         this.honesty = honesty;
+    }
+
+    public String getHogwarts() {
+        return "Ученик Хогвартса " + getFirstName() + " " + getLastName() + " магическая сила " +
+                getMagicPower() + ", расстояние трансгресии " + getTransgressionDistance();
     }
 
     @Override
