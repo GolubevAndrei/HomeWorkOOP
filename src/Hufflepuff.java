@@ -5,7 +5,6 @@ public class Hufflepuff extends Hogwarts {
 
     public Hufflepuff(String firstName, String lastName, int magicPower, int transgressionDistance, int industriousness, int loyalty, int honesty) {
         super(firstName,lastName,magicPower,transgressionDistance);
-        Hogwarts hogwarts = new Hogwarts(firstName,lastName,magicPower,transgressionDistance);
         this.industriousness = industriousness;
         this.loyalty = loyalty;
         this.honesty = honesty;
@@ -47,5 +46,14 @@ public class Hufflepuff extends Hogwarts {
                 ", industriousness=" + industriousness +
                 ", loyalty=" + loyalty +
                 ", honesty=" + honesty;
+    }
+    public static String bestFacultetStudent(Hufflepuff hufflepuff,Hufflepuff hufflepuff1) {
+        int propertiesSum = hufflepuff.getIndustriousness() + hufflepuff.getHonesty() + hufflepuff.getLoyalty();
+        int propertiesSum1 = hufflepuff1.getIndustriousness() + hufflepuff1.getHonesty() + hufflepuff1.getLoyalty();
+        if (propertiesSum > propertiesSum1) {
+            return "Побеждет студент(ка) Пуффендуя = " + hufflepuff.getFirstName() + " " + hufflepuff.getLastName();
+        } else {
+            return "Побеждет студент(ка) Пуффендуя = " + hufflepuff1.getFirstName() + " " + hufflepuff1.getLastName();
+        }
     }
 }

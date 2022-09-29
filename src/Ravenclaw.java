@@ -6,7 +6,6 @@ public class Ravenclaw extends Hogwarts {
 
     public Ravenclaw(String firstName, String lastName, int magicPower, int transgressionDistance, int mind, int wisdom, int wit, int creativity) {
         super(firstName, lastName, magicPower, transgressionDistance);
-        Hogwarts hogwarts = new Hogwarts(firstName,lastName,magicPower,transgressionDistance);
         this.mind = mind;
         this.wisdom = wisdom;
         this.wit = wit;
@@ -58,5 +57,14 @@ public class Ravenclaw extends Hogwarts {
                 ", wisdom=" + wisdom +
                 ", wit=" + wit +
                 ", creativity=" + creativity;
+    }
+    public static String bestFacultetStudent(Ravenclaw ravenclaw,Ravenclaw ravenclaw1) {
+        int propertiesSum = ravenclaw.getMind() + ravenclaw.getCreativity() + ravenclaw.getWisdom() + ravenclaw.getWit();
+        int propertiesSum1 = ravenclaw1.getMind() + ravenclaw1.getCreativity() + ravenclaw1.getWisdom() + ravenclaw1.getWit();
+        if (propertiesSum > propertiesSum1) {
+            return "Побеждет студент(ка) Райвенкло = " + ravenclaw.getFirstName() + " " + ravenclaw.getLastName();
+        } else {
+            return "Побеждет студент(ка) Райвенкло = " + ravenclaw1.getFirstName() + " " + ravenclaw1.getLastName();
+        }
     }
 }

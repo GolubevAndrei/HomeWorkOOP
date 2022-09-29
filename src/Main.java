@@ -23,7 +23,7 @@ public class Main {
         //   Вывод на печать студента факультета Хогвартса
         System.out.println(Hogwarts.HogwartsStudentPrint(sedric));
         //   Вывод на печать сравнения студентов факультета Хогвартса
-        System.out.println(Hogwarts.bestFacultetStudent(padma,chou));
+        System.out.println(Ravenclaw.bestFacultetStudent(padma,chou));
         //   Вывод на печать сравнения студентов Хогвартса
         System.out.println(Hogwarts.bestStudentHogwarts(draco,germiona));
     }

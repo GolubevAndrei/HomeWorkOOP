@@ -5,7 +5,6 @@ public class Gryffindor extends Hogwarts {
 
     public Gryffindor(String firstName, String lastName, int magicPower, int transgressionDistance, int nobility, int honor, int bravery) {
         super(firstName,lastName,magicPower,transgressionDistance);
-        Hogwarts hogwarts = new Hogwarts(firstName,lastName,magicPower,transgressionDistance);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
@@ -48,6 +47,14 @@ public class Gryffindor extends Hogwarts {
                 ", honor=" + honor +
                 ", bravery=" + bravery;
     }
-
+    public static String bestFacultetStudent(Gryffindor gryffindor,Gryffindor gryffindor1) {
+        int propertiesSum = gryffindor.getNobility() + gryffindor.getBravery() + gryffindor.getHonor();
+        int propertiesSum1 = gryffindor1.getNobility() + gryffindor1.getBravery() + gryffindor1.getHonor();
+        if (propertiesSum > propertiesSum1) {
+            return "Побеждет студент(ка) Гриффиндора = " + gryffindor.getFirstName() + " " + gryffindor.getLastName();
+        } else {
+            return "Побеждет студент(ка) Гриффиндора = " + gryffindor1.getFirstName() + " " + gryffindor1.getLastName();
+        }
+    }
 
 }
